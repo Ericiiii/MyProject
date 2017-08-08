@@ -40,7 +40,7 @@ public class XMLUtils {
                 String acode=recordEle.attributeValue("acode");
                 String atime=recordEle.attributeValue("atime");
 
-                list.add(new LotteryEntity(pid,acode,atime));
+                list.add(new LotteryEntity(pid,acode,atime,1));
 
             }
 

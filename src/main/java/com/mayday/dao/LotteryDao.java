@@ -20,4 +20,11 @@ public class LotteryDao {
     public List<LotteryEntity> queryLottery(LotteryEntity LotteryEntity){
      return   lotteryMapper.queryLottery(LotteryEntity);
     }
+
+    public List<LotteryEntity> getLotteryLastTime(LotteryEntity lotteryEntity){
+        return   lotteryMapper.getLotteryLastTime(lotteryEntity);
+    }
+
+
+
 }

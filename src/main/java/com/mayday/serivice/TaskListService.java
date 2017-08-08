@@ -18,4 +18,17 @@ public class TaskListService {
         return taskListDao.getTaskList();
     }
 
+    public Boolean updateTaskTime(TimingTask timingTask){
+        boolean flag;
+
+        try {
+            taskListDao.updateTaskTime(timingTask);
+            flag=true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            flag=false;
+        }
+        return flag;
+    }
+
 }

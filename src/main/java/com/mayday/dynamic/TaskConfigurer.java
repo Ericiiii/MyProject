@@ -14,6 +14,11 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 
+/**
+ * 动态定时器配置类
+ * 这个类主要使用毫秒
+ */
+
 @Component
 public class TaskConfigurer implements SchedulingConfigurer {
 

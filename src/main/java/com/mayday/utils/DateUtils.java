@@ -294,6 +294,9 @@ public final class DateUtils {
         return formatDateByPattern(date, dateFormat);
     }
 
+
+
+
     public static void main(String[] args) throws ParseException {
 //		System.out.println(getBeginTimeOfTheDay(-1));
 //		System.out.println(getEndTimeOfTheDay(-1));

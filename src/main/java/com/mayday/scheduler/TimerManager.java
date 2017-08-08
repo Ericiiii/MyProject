@@ -62,7 +62,7 @@ public class TimerManager {
                 String date= DateUtils.getNow("yyyy-MM-dd");   //传入的时间 ，例如2017-08-08
                 String url = ConfigLoadUtils.getConfigValueByKey("cqssc.one.api.url");
 
-                execute(name,date,url);
+                execute(name,date,url,01);
 
             }
         },time1,60000, TimeUnit.MILLISECONDS);
@@ -104,7 +104,7 @@ public class TimerManager {
     }
 
     //执行
-    public  void execute(String name,String data,String url){
+    public  void execute(String name,String data,String url,int lotteryId){
 
 
         String urlAll =url+name+"/"+data+".xml";
@@ -116,9 +116,9 @@ public class TimerManager {
         LotteryService lotteryService=(LotteryService) ApplicationContextUtil.getBean("lotteryService");
 
         //首先查询开奖结果是否在数据库中存在
-        List<LotteryEntity> queryList= lotteryService.queryLottery(new LotteryEntity(list.get(0).getPid(),list.get(0).getAcode(),list.get(0).getAtime()));
+        List<LotteryEntity> queryList= lotteryService.queryLottery(new LotteryEntity(list.get(0).getPid(),list.get(0).getAcode(),list.get(0).getAtime(),lotteryId));
         if(queryList.size()<1){
-            lotteryService.insertLottery(new LotteryEntity(list.get(0).getPid(),list.get(0).getAcode(),list.get(0).getAtime()));
+            lotteryService.insertLottery(new LotteryEntity(list.get(0).getPid(),list.get(0).getAcode(),list.get(0).getAtime(),lotteryId));
         }
 
     }

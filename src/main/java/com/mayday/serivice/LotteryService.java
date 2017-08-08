@@ -21,8 +21,14 @@ public class LotteryService{
 
     }
 
-    public List<LotteryEntity>  queryLottery(LotteryEntity LotteryEntity){
-        return lotteryDao.queryLottery(LotteryEntity);
+    public List<LotteryEntity>  queryLottery(LotteryEntity lotteryEntity){
+        return lotteryDao.queryLottery(lotteryEntity);
+    }
+
+    public List<LotteryEntity>  getLotteryLastTime(LotteryEntity lotteryEntity){
+        return lotteryDao.getLotteryLastTime(lotteryEntity
+        );
+
     }
 
 }

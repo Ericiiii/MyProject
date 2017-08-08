@@ -16,4 +16,17 @@ public class TaskListDao {
     public List<TimingTask> getTaskList(){
         return dynamicMapper.getTaskList();
     }
+
+    //修改定时器执行策略
+    public Boolean updateTaskTime(TimingTask timingTask){
+        Boolean flag;
+        try {
+            dynamicMapper.updateTaskTime(timingTask);
+            flag=true;
+        }catch (Exception e) {
+            e.printStackTrace();
+            flag=false;
+        }
+        return flag;
+    }
 }

@@ -20,7 +20,7 @@ public class GetLottery {
     private LotteryService lotteryService;
 
     //执行
-    public  void execute(String name,String data,String url){
+   /* public  void execute(String name,String data,String url){
 
 
         String urlAll =url+name+"/"+data+".xml";
@@ -35,7 +35,7 @@ public class GetLottery {
             lotteryService.insertLottery(new LotteryEntity(list.get(0).getPid(),list.get(0).getAcode(),list.get(0).getAtime()));
         }
 
-    }
+    }*/
 
     /**
      *

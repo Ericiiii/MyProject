@@ -22,7 +22,7 @@ public class DynamicTask {
     @Autowired
     private TaskListService taskListService;
 
-    @Scheduled(cron="0/5 * * * * ?")
+    @Scheduled(cron="0/10 * * * * ?")
     public void loadTasks(){
         System.out.println("任务正在执行.."+new Date());
         //从数据库查询

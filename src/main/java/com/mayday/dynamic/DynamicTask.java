@@ -17,7 +17,7 @@ public class DynamicTask {
 
 
     @Autowired
-    private DynamicTaskConfigurer dynamicTaskConfigurer;
+    private TaskConfigurer TaskConfigurer;
 
     @Autowired
     private TaskListService taskListService;
@@ -26,9 +26,9 @@ public class DynamicTask {
     public void loadTasks(){
         System.out.println("任务正在执行.."+new Date());
         //从数据库查询
-
+        //当任务的执行周期发生变化时，定时器自动 更改策略
         List<TimingTask> tasks =taskListService.getTaskList();
 
-        dynamicTaskConfigurer.refreshTasks(tasks);
+        TaskConfigurer.refreshTasks(tasks);
     }
 }

@@ -13,7 +13,7 @@ public interface DynamicMapper {
     @Select("SELECT * FROM TASKLIST")
     @Results({
             @Result(property = "taskId", column = "taskId", javaType =Integer.class),
-            @Result(property = "expression", column = "expression" ,javaType=String.class),
+            @Result(property = "expression", column = "expression" ,javaType=Long.class),
 
 
     })

@@ -4,13 +4,13 @@ public class TimingTask {
 
     private Integer taskId;
 
-    private String expression;
+    private Long expression;
 
     public TimingTask() {
 
     }
 
-    public TimingTask(Integer taskId, String expression) {
+    public TimingTask(Integer taskId, Long expression) {
         this.taskId = taskId;
         this.expression = expression;
     }
@@ -23,11 +23,11 @@ public class TimingTask {
         this.taskId = taskId;
     }
 
-    public String getExpression() {
+    public Long getExpression() {
         return expression;
     }
 
-    public void setExpression(String expression) {
+    public void setExpression(Long expression) {
         this.expression = expression;
     }
 }

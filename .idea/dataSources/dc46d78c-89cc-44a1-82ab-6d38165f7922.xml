@@ -54,7 +54,7 @@
     </column>
     <column id="19" parent="10" name="expression">
       <Position>3</Position>
-      <DataType>varchar(20)|0</DataType>
+      <DataType>mediumtext|0</DataType>
       <NotNull>1</NotNull>
     </column>
     <key id="20" parent="10" name="PRIMARY">

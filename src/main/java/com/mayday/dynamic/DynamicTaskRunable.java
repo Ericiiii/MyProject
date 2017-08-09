@@ -76,6 +76,19 @@ public class DynamicTaskRunable implements Runnable{
        }
        if(taskId==3){
            log.info("开始执行【广西快乐十分】当前时间为:"+new Date());
+
+           String url=ConfigLoadUtils.getConfigValueByKey("gxklsf.one.api.url");
+           String code=ConfigLoadUtils.getConfigValueByKey("gxklsf.one.api.code");
+           String ConfigTime=ConfigLoadUtils.getConfigValueByKey("gxklsf.one.api.time");
+
+           String urlAll=url+"?"+"lotCode="+code;
+           String chatset="UTF-8";
+           String jsonResult=get(urlAll,chatset);
+
+
+           List <LotteryEntity> list= JSONUtils.getLotteryList(jsonResult,taskId);
+           execute(taskId,list,ConfigTime);
+
        }
        if(taskId==4){
            log.info("开始执行【江苏快3】当前时间为:"+new Date());

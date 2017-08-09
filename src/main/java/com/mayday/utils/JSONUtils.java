@@ -1,6 +1,7 @@
 package com.mayday.utils;
 
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.mayday.dynamic.DynamicTaskRunable;
 import com.mayday.entity.LotteryEntity;
@@ -19,6 +20,7 @@ public class JSONUtils {
 
         JSONObject jsonObject1=JSONObject.parseObject(jsonObject.getString("result"));
         JSONObject jsonObject2=JSONObject.parseObject(jsonObject1.getString("data"));
+
 
          List<LotteryEntity>  list=new ArrayList<LotteryEntity>();
         list.add(new LotteryEntity(jsonObject2.getString("preDrawIssue"),jsonObject2.getString("preDrawCode"),jsonObject2.getString("preDrawTime"),lotteryId));

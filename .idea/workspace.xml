@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="d7d04ff1-bb14-4dbe-ad7f-616f6464b3c3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+<<<<<<< HEAD
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+>>>>>>> d971b7eea73d89926c3e18ea3ef4dc08ada62318
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -45,8 +49,13 @@
       <file leaf-file-name="dream_tasklist.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/sql/dream_tasklist.sql">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="0">
               <caret line="0" column="64" lean-forward="false" selection-start-line="0" selection-start-column="64" selection-end-line="0" selection-end-column="64" />
+=======
+            <state relative-caret-position="330">
+              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+>>>>>>> d971b7eea73d89926c3e18ea3ef4dc08ada62318
               <folding />
             </state>
           </provider>
@@ -55,13 +64,19 @@
       <file leaf-file-name="dream_lotteryigkbet.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/sql/dream_lotteryigkbet.sql">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="26">
               <caret line="5" column="90" lean-forward="false" selection-start-line="5" selection-start-column="90" selection-end-line="5" selection-end-column="90" />
+=======
+            <state relative-caret-position="315">
+              <caret line="21" column="33" lean-forward="false" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+>>>>>>> d971b7eea73d89926c3e18ea3ef4dc08ada62318
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
@@ -71,6 +86,14 @@
                 <folding />
               </first_editor>
               <second_editor />
+=======
+      <file leaf-file-name="TaskConfigurer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mayday/dynamic/TaskConfigurer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="34" column="54" lean-forward="false" selection-start-line="34" selection-start-column="54" selection-end-line="34" selection-end-column="54" />
+              <folding />
+>>>>>>> d971b7eea73d89926c3e18ea3ef4dc08ada62318
             </state>
           </provider>
         </entry>
@@ -78,8 +101,13 @@
       <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/mayday/serivice/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="234">
               <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+=======
+            <state relative-caret-position="210">
+              <caret line="24" column="25" lean-forward="false" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+>>>>>>> d971b7eea73d89926c3e18ea3ef4dc08ada62318
               <folding />
             </state>
           </provider>
@@ -88,13 +116,24 @@
       <file leaf-file-name="TaskListService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/mayday/serivice/TaskListService.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="312">
               <caret line="20" column="33" lean-forward="false" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="33" />
               <folding />
+=======
+            <state relative-caret-position="735">
+              <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2369#2370#0" expanded="true" />
+                <element signature="e#2398#2399#0" expanded="true" />
+              </folding>
+>>>>>>> d971b7eea73d89926c3e18ea3ef4dc08ada62318
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="LotteryService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/mayday/serivice/LotteryService.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -130,17 +169,45 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="286">
               <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+=======
+      <file leaf-file-name="dream_tasklist.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/sql/dream_tasklist.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="64" lean-forward="false" selection-start-line="0" selection-start-column="64" selection-end-line="0" selection-end-column="64" />
+>>>>>>> d971b7eea73d89926c3e18ea3ef4dc08ada62318
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="841">
               <caret line="33" column="34" lean-forward="true" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
+=======
+      <file leaf-file-name="dream_lotteryigkbet.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/sql/dream_lotteryigkbet.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="90" lean-forward="false" selection-start-line="5" selection-start-column="90" selection-end-line="5" selection-end-column="90" />
+>>>>>>> d971b7eea73d89926c3e18ea3ef4dc08ada62318
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="75">
+                <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -178,7 +245,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/Application.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mayday/utils/HttpClientHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mayday/utils/HttpClientResponseModel.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
@@ -229,6 +295,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/mayday/serivice/TaskListService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mayday/dynamic/DynamicTaskRunable.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mayday/dynamic/DynamicTask.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -254,7 +321,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -277,142 +344,64 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+<<<<<<< HEAD
       <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="AndroidView" />
+=======
+>>>>>>> d971b7eea73d89926c3e18ea3ef4dc08ada62318
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="lotteryIGKbet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lotteryIGKbet" type="462c0819:PsiDirectoryNode" />
+              <item name="workspace" type="b2602c69:ProjectViewProjectNode" />
+              <item name="workspace" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="lotteryIGKbet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lotteryIGKbet" type="462c0819:PsiDirectoryNode" />
+              <item name="workspace" type="b2602c69:ProjectViewProjectNode" />
+              <item name="workspace" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="lotteryIGKbet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lotteryIGKbet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lotteryIGKbet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lotteryIGKbet" type="462c0819:PsiDirectoryNode" />
+              <item name="workspace" type="b2602c69:ProjectViewProjectNode" />
+              <item name="workspace" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="lotteryIGKbet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lotteryIGKbet" type="462c0819:PsiDirectoryNode" />
+              <item name="workspace" type="b2602c69:ProjectViewProjectNode" />
+              <item name="workspace" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mayday" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="lotteryIGKbet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lotteryIGKbet" type="462c0819:PsiDirectoryNode" />
+              <item name="workspace" type="b2602c69:ProjectViewProjectNode" />
+              <item name="workspace" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="mayday" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="lotteryIGKbet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lotteryIGKbet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mayday" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lotteryIGKbet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lotteryIGKbet" type="462c0819:PsiDirectoryNode" />
+              <item name="workspace" type="b2602c69:ProjectViewProjectNode" />
+              <item name="workspace" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="mayday" type="462c0819:PsiDirectoryNode" />
               <item name="dynamic" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="lotteryIGKbet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lotteryIGKbet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mayday" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lotteryIGKbet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lotteryIGKbet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mayday" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lotteryIGKbet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lotteryIGKbet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mayday" type="462c0819:PsiDirectoryNode" />
-              <item name="quartz" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lotteryIGKbet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lotteryIGKbet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mayday" type="462c0819:PsiDirectoryNode" />
-              <item name="scheduler" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lotteryIGKbet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lotteryIGKbet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mayday" type="462c0819:PsiDirectoryNode" />
-              <item name="serivice" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lotteryIGKbet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lotteryIGKbet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mayday" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lotteryIGKbet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lotteryIGKbet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lotteryIGKbet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lotteryIGKbet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="sql" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+<<<<<<< HEAD
+=======
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
+>>>>>>> d971b7eea73d89926c3e18ea3ef4dc08ada62318
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -427,7 +416,7 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="RequestMappingsPanelOrder2" value="2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/sql" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
@@ -685,8 +674,13 @@
       <workItem from="1501894805795" duration="2410000" />
       <workItem from="1501899870516" duration="20699000" />
       <workItem from="1502067685792" duration="22656000" />
+<<<<<<< HEAD
       <workItem from="1502154525644" duration="24850000" />
       <workItem from="1502240557562" duration="631000" />
+=======
+      <workItem from="1502154525644" duration="24748000" />
+      <workItem from="1502198258575" duration="91000" />
+>>>>>>> d971b7eea73d89926c3e18ea3ef4dc08ada62318
     </task>
     <task id="LOCAL-00001" summary="config">
       <created>1502156615452</created>
@@ -731,7 +725,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="82746000" />
+=======
+    <option name="totallyTimeSpent" value="82104000" />
+>>>>>>> d971b7eea73d89926c3e18ea3ef4dc08ada62318
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -743,7 +741,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -760,10 +758,17 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23535791" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27452025" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12846482" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27142859" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1279762" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+>>>>>>> d971b7eea73d89926c3e18ea3ef4dc08ada62318
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -852,6 +857,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+<<<<<<< HEAD
         </state>
       </provider>
     </entry>
@@ -862,6 +868,41 @@
         </state>
       </provider>
     </entry>
+=======
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mayday/serivice/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="858">
+          <caret line="33" column="34" lean-forward="true" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="76" column="37" lean-forward="false" selection-start-line="76" selection-start-column="37" selection-end-line="76" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.7.0_79/src.zip!/java/util/concurrent/ConcurrentHashMap.java" />
+>>>>>>> d971b7eea73d89926c3e18ea3ef4dc08ada62318
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.2.5.RELEASE/spring-context-4.2.5.RELEASE.jar!/org/springframework/scheduling/config/SchedulerBeanDefinitionParser.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
@@ -1002,6 +1043,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/dc46d78c-89cc-44a1-82ab-6d38165f7922/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
@@ -1013,9 +1055,17 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+=======
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/dc46d78c-89cc-44a1-82ab-6d38165f7922/console.sql" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mayday/scheduler/TimerManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+>>>>>>> d971b7eea73d89926c3e18ea3ef4dc08ada62318
         </state>
       </provider>
     </entry>
+    <entry file="das://table:/6e5a72a0/dc46d78c-89cc-44a1-82ab-6d38165f7922/dream.lotteryigkbet" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mayday/scheduler/TaskCronChange.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="541">
@@ -1034,6 +1084,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="624">
           <caret line="24" column="23" lean-forward="false" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="23" />
+<<<<<<< HEAD
+=======
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mayday/serivice/LotteryService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="17" column="60" lean-forward="true" selection-start-line="17" selection-start-column="60" selection-end-line="17" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mayday/serivice/TaskListService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="20" column="33" lean-forward="false" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="33" />
+>>>>>>> d971b7eea73d89926c3e18ea3ef4dc08ada62318
         </state>
       </provider>
     </entry>
@@ -1060,7 +1127,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mayday/dao/LotteryDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
+        <state relative-caret-position="330">
           <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding />
         </state>
@@ -1068,7 +1135,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mayday/dynamic/DynamicTaskRunable.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="1274">
+=======
+        <state relative-caret-position="735">
+>>>>>>> d971b7eea73d89926c3e18ea3ef4dc08ada62318
           <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1080,7 +1151,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mayday/entity/LotteryEntity.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="546">
+=======
+        <state relative-caret-position="315">
+>>>>>>> d971b7eea73d89926c3e18ea3ef4dc08ada62318
           <caret line="21" column="33" lean-forward="false" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
           <folding />
         </state>
@@ -1088,7 +1163,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mayday/dynamic/TaskConfigurer.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="520">
+=======
+        <state relative-caret-position="300">
+>>>>>>> d971b7eea73d89926c3e18ea3ef4dc08ada62318
           <caret line="34" column="54" lean-forward="false" selection-start-line="34" selection-start-column="54" selection-end-line="34" selection-end-column="54" />
           <folding />
         </state>
@@ -1096,12 +1175,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mayday/dynamic/DynamicTask.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="364">
+=======
+        <state relative-caret-position="210">
+>>>>>>> d971b7eea73d89926c3e18ea3ef4dc08ada62318
           <caret line="24" column="25" lean-forward="false" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/dc46d78c-89cc-44a1-82ab-6d38165f7922/console_3.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -1192,6 +1276,11 @@
         </state>
       </provider>
     </entry>
+=======
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/dc46d78c-89cc-44a1-82ab-6d38165f7922/console_3.sql" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/dc46d78c-89cc-44a1-82ab-6d38165f7922/console_4.sql" />
+    <entry file="das://table:/6e5a72a0/dc46d78c-89cc-44a1-82ab-6d38165f7922/dream.tasklist" />
+>>>>>>> d971b7eea73d89926c3e18ea3ef4dc08ada62318
     <entry file="file://$PROJECT_DIR$/src/main/resources/sql/dream_tasklist.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1202,9 +1291,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="286">
           <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+=======
+        <state relative-caret-position="75">
+          <caret line="5" column="90" lean-forward="false" selection-start-line="5" selection-start-column="90" selection-end-line="5" selection-end-column="90" />
+>>>>>>> d971b7eea73d89926c3e18ea3ef4dc08ada62318
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="75">
+            <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

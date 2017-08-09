@@ -3,6 +3,7 @@ package com.mayday.utils;
 
 
 
+import com.mayday.dynamic.DynamicTaskRunable;
 import com.mayday.entity.LotteryEntity;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
@@ -20,15 +21,14 @@ import java.util.List;
 public class XMLUtils {
 
     //解析重庆时时彩xml
-    public static List<LotteryEntity> getLotteryList(String xml) {
+    public static List<LotteryEntity> getLotteryList(String xml,String rootEleName,String chiNameOne,String chiNameTwo,String chiNameThree,int lotteryId) {
         Document doc = null;
         List<LotteryEntity> list=new ArrayList <LotteryEntity>();
 
         try {
             doc = DocumentHelper.parseText(xml); // 将字符串转为XML
             Element rootElt = doc.getRootElement(); // 获取根节点
-            System.out.println("根节点：" + rootElt.getName()); // 拿到根节点的名称
-            Iterator iter = rootElt.elementIterator("row"); // 获取根节点下的子节点head
+            Iterator iter = rootElt.elementIterator(rootEleName); // 获取根节点下的子节点head
             // 遍历head节点
 
 
@@ -36,11 +36,11 @@ public class XMLUtils {
 
             while (iter.hasNext()) {
                 Element recordEle = (Element) iter.next();
-                String pid = recordEle.attributeValue("pid"); // 拿到head节点下的子节点title值
-                String acode=recordEle.attributeValue("acode");
-                String atime=recordEle.attributeValue("atime");
+                String pid = recordEle.attributeValue(chiNameOne); // 拿到head节点下的子节点title值
+                String acode=recordEle.attributeValue(chiNameTwo);
+                String atime=recordEle.attributeValue(chiNameThree);
 
-                list.add(new LotteryEntity(pid,acode,atime,1));
+                list.add(new LotteryEntity(pid,acode,atime,lotteryId));
 
             }
 
@@ -50,6 +50,12 @@ public class XMLUtils {
             e.printStackTrace();
         }
         return list;
+
+    }
+
+    public static void main(String [] args){
+
+
 
     }
 

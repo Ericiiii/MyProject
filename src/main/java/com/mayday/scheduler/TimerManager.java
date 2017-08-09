@@ -111,7 +111,7 @@ public class TimerManager {
         String charset = "UTF-8";
         String jsonResult = get(urlAll, charset);// 得到一个xml字符串
 
-        List<LotteryEntity> list= XMLUtils.getLotteryList(jsonResult);
+        List<LotteryEntity> list= XMLUtils.getLotteryList(jsonResult,"row","pid","acode","atime",1);
 
         LotteryService lotteryService=(LotteryService) ApplicationContextUtil.getBean("lotteryService");
 

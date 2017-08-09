@@ -98,14 +98,14 @@ public class TaskCronChange  implements SchedulingConfigurer {
     }
 
     //执行
-    public  void execute(String name,String data,String url,int lotteryId){
+   public  void execute(String name,String data,String url,int lotteryId){
 
 
         String urlAll =url+name+"/"+data+".xml";
         String charset = "UTF-8";
         String jsonResult = get(urlAll, charset);// 得到一个xml字符串
 
-        List<LotteryEntity> list= XMLUtils.getLotteryList(jsonResult);
+        List<LotteryEntity> list=XMLUtils.getLotteryList(jsonResult,"row","pid","acode","atime",1);
 
         //首先查询开奖结果是否在数据库中存在
         List<LotteryEntity> queryList= lotteryService.queryLottery(new LotteryEntity(list.get(0).getPid(),list.get(0).getAcode(),list.get(0).getAtime(),lotteryId));

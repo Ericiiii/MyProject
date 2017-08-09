@@ -1,4 +1,5 @@
 /*
+
 package com.mayday.dynamic;
 
 import com.mayday.entity.TimingTask;
@@ -14,6 +15,8 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 
+//定时器配置 ，这个类主要使用的是cron表达式
+
 @Component
 public class DynamicTaskConfigurer implements SchedulingConfigurer {
 
@@ -28,7 +31,7 @@ public class DynamicTaskConfigurer implements SchedulingConfigurer {
     }
 
     public void refreshTasks(List<TimingTask> tasks){
-        //取消已经删除的策略任务
+
         Set<Integer> sids = scheduledFutures.keySet();
         for (Integer sid : sids) {
             if(!exists(tasks, sid)){
@@ -72,4 +75,5 @@ public class DynamicTaskConfigurer implements SchedulingConfigurer {
         this.registrar.destroy();
     }
 }
+
 */

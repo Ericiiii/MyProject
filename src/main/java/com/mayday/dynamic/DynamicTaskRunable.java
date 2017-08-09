@@ -8,6 +8,8 @@ import com.mayday.utils.ApplicationContextUtil;
 import com.mayday.utils.ConfigLoadUtils;
 import com.mayday.utils.DateUtils;
 import com.mayday.utils.XMLUtils;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -25,8 +27,7 @@ import java.util.List;
  */
 public class DynamicTaskRunable implements Runnable{
 
-   // private final static Logger LOGGER =Logger.getLogger(DynamicTaskRunable.class);
-
+    Log log= LogFactory.getLog(DynamicTaskRunable.class);
     private Integer taskId;
 
     LotteryService lotteryService=(LotteryService) ApplicationContextUtil.getBean("lotteryService");
@@ -38,38 +39,27 @@ public class DynamicTaskRunable implements Runnable{
     }
     @Override
     public void run() {
-       // LOGGER.info("DynamicTaskRunable is running, taskId："+taskId);
-        System.out.println("TaskRunable is running, taskId：【"+taskId+"】执行时间为:"+new Date());
+
+
+        log.info("TaskRunable is running, taskId：【"+taskId+"】执行时间为:"+new Date());
 
         //得到任务编号 : 1 .重庆时时彩 2 .
        if(taskId==1){  //执行重庆时时彩
-
+           log.info("开始执行【重庆时时彩】当前时间为:"+new Date());
            String date= DateUtils.getNow("yyyy-MM-dd");   //传入的时间 ，例如2017-08-08
            String url = ConfigLoadUtils.getConfigValueByKey("cqssc.one.api.url");
            String name=ConfigLoadUtils.getConfigValueByKey("cqssc.one.api.name");
            execute(name,date,url,taskId);
 
-           //查询最近一次开奖时间 ，计算出下一次开奖时间
-          List<LotteryEntity> list= lotteryService.getLotteryLastTime(new LotteryEntity("","","",1));
-
-          //获取数据库中最近一次开奖时间
-          String atime=list.get(0).getAtime();
-           //计算下一次开间时间
-          long intervalTime=getIntervalTime(atime,720000);
-
-           //修改数据库中的定时器执行时间
-          boolean flag= taskListService.updateTaskTime(new TimingTask(taskId,intervalTime));
-          if(flag){
-              System.out.println("数据库定时器时间修改成功！");
-          }
 
 
 
-             System.out.println("距离下一次开奖时间为:【"+intervalTime+"】毫秒");
        }
        if(taskId==2){
-           System.out.println("开始执行广东快乐十分 ！");
+           log.info("开始执行【广东快乐十分】当前时间为:"+new Date());
        }
+
+
 
     }
 
@@ -81,21 +71,38 @@ public class DynamicTaskRunable implements Runnable{
     //执行
     public  void execute(String name,String data,String url,int lotteryId){
 
-
         String urlAll =url+name+"/"+data+".xml";
         String charset = "UTF-8";
         String jsonResult = get(urlAll, charset);// 得到一个xml字符串
 
         List<LotteryEntity> list= XMLUtils.getLotteryList(jsonResult);
 
-
-
         //首先查询开奖结果是否在数据库中存在
         List<LotteryEntity> queryList= lotteryService.queryLottery(new LotteryEntity(list.get(0).getPid(),list.get(0).getAcode(),list.get(0).getAtime(),lotteryId));
         if(queryList.size()<1){
             lotteryService.insertLottery(new LotteryEntity(list.get(0).getPid(),list.get(0).getAcode(),list.get(0).getAtime(),lotteryId));
-        }
+            //查询最近一次开奖时间 ，计算出下一次开奖时间
+            List<LotteryEntity> last= lotteryService.getLotteryLastTime(new LotteryEntity("","","",taskId));
 
+            //获取数据库中最近一次开奖时间 ,从数据库中查还不如从接口里查？
+            if(last.size()>0){
+                String atime=last.get(0).getAtime();
+
+                //计算下一次开间时间
+                long intervalTime=DynamicTaskRunable.getIntervalTime(atime,720000);
+
+                if(intervalTime>0){ //下一次开奖时间不能为负数
+
+                    //修改数据库中的定时器执行时间
+                    boolean flag= taskListService.updateTaskTime(new TimingTask(taskId,intervalTime));
+                    if(flag){
+                        System.out.println("数据库定时器时间修改成功！");
+                    }
+                }
+                System.out.println("距离下一次开奖时间为:【"+intervalTime+"】毫秒");
+            }
+
+        }
     }
 
     /**
@@ -147,7 +154,6 @@ public class DynamicTaskRunable implements Runnable{
         long  millisecond=0;
 
         String now=DateUtils.getNow("yyyy-MM-dd HH:mm:ss");
-
         try {
             d1 = format.parse(time);
             d2 = format.parse(now);
@@ -158,14 +164,11 @@ public class DynamicTaskRunable implements Runnable{
             long diffMinutes = millisecond / (60 * 1000) % 60;     //间隔的分钟数
             long diffHours = millisecond / (60 * 60 * 1000) % 24;  //间隔的小时数
             long diffDays = millisecond / (24 * 60 * 60 * 1000);   //间隔的天数
-
             System.out.println("两个日期时间差为:"+millisecond);
 
         } catch (ParseException e) {
             e.printStackTrace();
         }
-
-
         return millisecond;
     }
 

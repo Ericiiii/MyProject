@@ -54,6 +54,8 @@ public class Application {
         
         System.out.println("你不是真正的快乐");
 
+        System.out.println("你的笑只是你穿的保护色");
+
     }
 
 

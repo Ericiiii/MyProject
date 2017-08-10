@@ -63,7 +63,7 @@ public class TaskConfigurer implements SchedulingConfigurer {
             DynamicTaskRunable t = new DynamicTaskRunable(tt.getTaskId());
             IntervalTask task=new IntervalTask(t,time);
 
-            ScheduledFuture<?> future = registrar.getScheduler().scheduleAtFixedRate(task.getRunnable(), time);
+            ScheduledFuture<?> future = registrar.getScheduler().scheduleWithFixedDelay(task.getRunnable(), time);
             inTask.put(tt.getTaskId(), task);
             scheduledFutures.put(tt.getTaskId(), future);
 

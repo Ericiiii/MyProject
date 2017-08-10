@@ -16,18 +16,29 @@ public class JSONUtils {
 
     public static List<LotteryEntity> getLotteryList(String jsonStr,int lotteryId){
 
+        List<LotteryEntity>  list=new ArrayList<LotteryEntity>();
+
         JSONObject jsonObject=JSONObject.parseObject(jsonStr);
-
         JSONObject jsonObject1=JSONObject.parseObject(jsonObject.getString("result"));
-        JSONArray jsonArray=jsonObject1.getJSONArray("data");
-        JSONObject jsonObject2=JSONObject.parseObject(jsonArray.getString(0));
-     //   JSONObject jsonObject2=JSONObject.parseObject(jsonObject1.getString("data"));
 
-        System.out.println(jsonObject2);
-         List<LotteryEntity>  list=new ArrayList<LotteryEntity>();
-        list.add(new LotteryEntity(jsonObject2.getString("preDrawIssue"),jsonObject2.getString("preDrawCode"),jsonObject2.getString("preDrawTime"),lotteryId));
 
-        return list;
+        if(lotteryId==3){  //广西快乐十分，返回json数组
+
+            JSONArray jsonArray=(JSONArray)jsonObject1.getJSONArray("data");
+            for(int i=0;i<jsonArray.size();i++){
+                JSONObject jsonObject2=(JSONObject)jsonArray.get(0);
+                list.add(new LotteryEntity(jsonObject2.getString("preDrawIssue"),jsonObject2.getString("preDrawCode"),jsonObject2.getString("preDrawTime"),lotteryId));
+
+            }
+
+
+        }else {  //幸运农场或者其他返回为非json数组
+
+            JSONObject jsonObject2=JSONObject.parseObject(jsonObject1.getString("data"));
+            list.add(new LotteryEntity(jsonObject2.getString("preDrawIssue"),jsonObject2.getString("preDrawCode"),jsonObject2.getString("preDrawTime"),lotteryId));
+        }
+
+         return list;
 
     }
 

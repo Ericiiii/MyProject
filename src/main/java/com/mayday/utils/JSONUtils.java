@@ -19,9 +19,11 @@ public class JSONUtils {
         JSONObject jsonObject=JSONObject.parseObject(jsonStr);
 
         JSONObject jsonObject1=JSONObject.parseObject(jsonObject.getString("result"));
-        JSONObject jsonObject2=JSONObject.parseObject(jsonObject1.getString("data"));
+        JSONArray jsonArray=jsonObject1.getJSONArray("data");
+        JSONObject jsonObject2=JSONObject.parseObject(jsonArray.getString(0));
+     //   JSONObject jsonObject2=JSONObject.parseObject(jsonObject1.getString("data"));
 
-
+        System.out.println(jsonObject2);
          List<LotteryEntity>  list=new ArrayList<LotteryEntity>();
         list.add(new LotteryEntity(jsonObject2.getString("preDrawIssue"),jsonObject2.getString("preDrawCode"),jsonObject2.getString("preDrawTime"),lotteryId));
 

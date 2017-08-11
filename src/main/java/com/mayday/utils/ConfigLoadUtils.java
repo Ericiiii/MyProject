@@ -5,7 +5,7 @@ import java.io.InputStream;
 import java.util.Properties;
 
 /**
- * Created by EricAi on 2017/5/12.
+ * Created by Eric on 2017/5/12.
  * 加载配置文件工具类
  */
 public class ConfigLoadUtils {

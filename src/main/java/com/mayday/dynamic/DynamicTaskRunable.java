@@ -54,7 +54,7 @@ public class DynamicTaskRunable implements Runnable{
 
            //接口2
            String urlTwo=ConfigLoadUtils.getConfigValueByKey("cqssc.two.api.url");
-           String codeTwo=ConfigLoadUtils.getConfigValueByKey("cqssc.two.api.code");
+           String codeTwo=ConfigLoadUtils.getConfigValueByKey("cqssc.two.api.name");
            String configTimeTwo=ConfigLoadUtils.getConfigValueByKey("cqssc.two.api.time");
            String urlAllTwo=urlTwo+"?"+"lotCode="+ codeTwo;
 
@@ -64,7 +64,7 @@ public class DynamicTaskRunable implements Runnable{
                String xmlResult = get(urlAll, charset);// 得到一个xml字符串
                list = XMLUtils.getLotteryList(xmlResult,"row","pid","acode","atime",1);
                if(list.size()<1){  //如果没有抓取到数据 ，那么开始抓取第二个接口
-
+                   log.info("未抓取到数据，开始尝试抓取第二个接口...");
                    String jsonResult=get(urlAllTwo,charset);
                    list=JSONUtils.getLotteryList(jsonResult,taskId);
 
@@ -72,6 +72,7 @@ public class DynamicTaskRunable implements Runnable{
            } catch (Exception e) {
                e.printStackTrace();
                //如果出现异常 ，那么请求第二个接口
+               log.info("接口出现异常，开始尝试抓取第二个接口...");
                String jsonResult=get(urlAllTwo,charset);
                list=JSONUtils.getLotteryList(jsonResult,taskId);
 

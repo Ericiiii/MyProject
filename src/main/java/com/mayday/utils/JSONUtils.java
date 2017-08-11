@@ -36,8 +36,6 @@ public class JSONUtils {
                 list.add(new LotteryEntity(jsonObject2.getString("preDrawIssue"),jsonObject2.getString("preDrawCode"),jsonObject2.getString("preDrawTime"),lotteryId));
 
             }
-
-
         }
 
          return list;

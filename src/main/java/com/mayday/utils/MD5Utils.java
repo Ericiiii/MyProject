@@ -5,10 +5,10 @@ import java.security.MessageDigest;
 
 public class MD5Utils {
 
-        private static final String SALT = "tamboo";
+        private static final String SALT = "mayday";
 
         public static String encode(String password) {
-            password = password + SALT;
+         //   password = password + SALT;
             MessageDigest md5 = null;
             try {
                 md5 = MessageDigest.getInstance("MD5");

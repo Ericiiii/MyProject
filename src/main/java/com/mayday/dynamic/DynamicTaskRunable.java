@@ -15,6 +15,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -40,8 +41,9 @@ public class DynamicTaskRunable implements Runnable{
 
         log.info("TaskRunable is running, taskId：【"+taskId+"】执行时间为:"+new Date());
 
-        //得到任务编号 : 1 .重庆时时彩 2 .幸运农场 3 .广西快乐十分 4 . 江苏快3
+        //得到任务编号 : 1 .重庆时时彩 2 .幸运农场 3 .广西十一选五 4 . 江苏快3
        if(taskId==1){  //执行重庆时时彩
+           //接口1
            log.info("开始执行【重庆时时彩】当前时间为:"+new Date());
            String date= DateUtils.getNow("yyyy-MM-dd");   //传入的时间 ，例如2017-08-08
            String url = ConfigLoadUtils.getConfigValueByKey("cqssc.one.api.url");
@@ -50,8 +52,30 @@ public class DynamicTaskRunable implements Runnable{
            String charset="UTF-8";
            String urlAll=url+name+"/"+date+".xml";
 
-           String xmlResult = get(urlAll, charset);// 得到一个xml字符串
-           List<LotteryEntity> list= XMLUtils.getLotteryList(xmlResult,"row","pid","acode","atime",1);
+           //接口2
+           String urlTwo=ConfigLoadUtils.getConfigValueByKey("cqssc.two.api.url");
+           String codeTwo=ConfigLoadUtils.getConfigValueByKey("cqssc.two.api.code");
+           String configTimeTwo=ConfigLoadUtils.getConfigValueByKey("cqssc.two.api.time");
+           String urlAllTwo=urlTwo+"?"+"lotCode="+ codeTwo;
+
+           List<LotteryEntity> list= null;
+
+           try {  //如果接口请求出现异常，那么请求第二个接口
+               String xmlResult = get(urlAll, charset);// 得到一个xml字符串
+               list = XMLUtils.getLotteryList(xmlResult,"row","pid","acode","atime",1);
+               if(list.size()<1){  //如果没有抓取到数据 ，那么开始抓取第二个接口
+
+                   String jsonResult=get(urlAllTwo,charset);
+                   list=JSONUtils.getLotteryList(jsonResult,taskId);
+
+               }
+           } catch (Exception e) {
+               e.printStackTrace();
+               //如果出现异常 ，那么请求第二个接口
+               String jsonResult=get(urlAllTwo,charset);
+               list=JSONUtils.getLotteryList(jsonResult,taskId);
+
+           }
 
            execute(taskId,list,time);
 
@@ -75,7 +99,7 @@ public class DynamicTaskRunable implements Runnable{
 
        }
        if(taskId==3){
-           log.info("开始执行【广西快乐十分】当前时间为:"+new Date());
+           log.info("开始执行【广西十一选五】当前时间为:"+new Date());
 
            String url=ConfigLoadUtils.getConfigValueByKey("gxklsf.one.api.url");
            String code=ConfigLoadUtils.getConfigValueByKey("gxklsf.one.api.code");
@@ -92,6 +116,43 @@ public class DynamicTaskRunable implements Runnable{
        }
        if(taskId==4){
            log.info("开始执行【江苏快3】当前时间为:"+new Date());
+           //接口1
+           String url=ConfigLoadUtils.getConfigValueByKey("jsk3.one.api.url");
+           String code=ConfigLoadUtils.getConfigValueByKey("jsk3.one.api.code");
+           String ConfigTime=ConfigLoadUtils.getConfigValueByKey("jsk3.one.api.time");
+           String urlAll=url+"?"+"lotCode="+code;
+
+           //接口2
+           String urlTwo=ConfigLoadUtils.getConfigValueByKey("jsk3.two.api.url");
+           String codeTwo=ConfigLoadUtils.getConfigValueByKey("jsk3.two.api.code");
+           String configTimeTwo=ConfigLoadUtils.getConfigValueByKey("jsk3.two.api.time");
+           String date= DateUtils.getNow("yyyy-MM-dd");   //传入的时间 ，例如2017-08-08
+
+           String urlAllTwo=urlTwo+codeTwo+"/"+date+".xml";
+
+           String chatset="UTF-8";
+
+           List <LotteryEntity> list= new ArrayList<LotteryEntity>();
+
+           try {  //如果接口请求出现异常 ，那么执行第二个接口
+               String jsonStr=get(urlAll,chatset);
+               list = JSONUtils.getLotteryList(jsonStr,taskId);
+
+               if(list.size()<1){  //没有抓取到开奖结果 ，那么继续抓取第二个接口
+                   Thread.sleep(10000);  //延时10秒
+                   String xmlResult=get(urlAllTwo,chatset);
+                   list=XMLUtils.getLotteryList(xmlResult,"row","pid","acode","atime",4);
+
+               }
+           } catch (Exception e) {   //如果出现异常 ，那么继续抓取第二个接口
+               e.printStackTrace();
+               String xmlResult=get(urlAllTwo,chatset);
+               list=XMLUtils.getLotteryList(xmlResult,"row","pid","acode","atime",4);
+           }
+
+
+           execute(taskId,list,ConfigTime);
+
        }
 
 

@@ -14,6 +14,7 @@ import javax.annotation.PreDestroy;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.ScheduledFuture;
 
 /**
@@ -28,8 +29,8 @@ public class TaskConfigurer implements SchedulingConfigurer {
 
     private Log log= LogFactory.getLog(TaskConfigurer.class);
 
-    private final ConcurrentHashMap<Integer, ScheduledFuture<?>> scheduledFutures = new ConcurrentHashMap<Integer, ScheduledFuture<?>>();
-    private final ConcurrentHashMap<Integer, IntervalTask> inTask = new ConcurrentHashMap<Integer, IntervalTask>();
+    private final ConcurrentMap<Integer, ScheduledFuture<?>> scheduledFutures = new ConcurrentHashMap<Integer, ScheduledFuture<?>>();
+    private final ConcurrentMap<Integer, IntervalTask> inTask = new ConcurrentHashMap<Integer, IntervalTask>();
 
     @Override
     public void configureTasks(ScheduledTaskRegistrar registrar) {
@@ -63,7 +64,7 @@ public class TaskConfigurer implements SchedulingConfigurer {
             DynamicTaskRunable t = new DynamicTaskRunable(tt.getTaskId());
             IntervalTask task=new IntervalTask(t,time);
 
-            ScheduledFuture<?> future = registrar.getScheduler().scheduleWithFixedDelay(task.getRunnable(), time);
+            ScheduledFuture<?> future = registrar.getScheduler().scheduleAtFixedRate(task.getRunnable(), time);
             inTask.put(tt.getTaskId(), task);
             scheduledFutures.put(tt.getTaskId(), future);
 

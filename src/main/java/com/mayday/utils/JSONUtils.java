@@ -1,6 +1,6 @@
 package com.mayday.utils;
 
-import com.alibaba.fastjson.JSON;
+
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.mayday.dynamic.DynamicTaskRunable;
@@ -22,7 +22,13 @@ public class JSONUtils {
         JSONObject jsonObject1=JSONObject.parseObject(jsonObject.getString("result"));
 
 
-        if(lotteryId==3){  //广西快乐十分，返回json数组
+        if(lotteryId==2){  //幸运农场，返回非json数组
+
+            JSONObject jsonObject2=JSONObject.parseObject(jsonObject1.getString("data"));
+            list.add(new LotteryEntity(jsonObject2.getString("preDrawIssue"),jsonObject2.getString("preDrawCode"),jsonObject2.getString("preDrawTime"),lotteryId));
+
+        }else {  //广西十一选五或者其他返回为json数组
+
 
             JSONArray jsonArray=(JSONArray)jsonObject1.getJSONArray("data");
             for(int i=0;i<jsonArray.size();i++){
@@ -32,10 +38,6 @@ public class JSONUtils {
             }
 
 
-        }else {  //幸运农场或者其他返回为非json数组
-
-            JSONObject jsonObject2=JSONObject.parseObject(jsonObject1.getString("data"));
-            list.add(new LotteryEntity(jsonObject2.getString("preDrawIssue"),jsonObject2.getString("preDrawCode"),jsonObject2.getString("preDrawTime"),lotteryId));
         }
 
          return list;

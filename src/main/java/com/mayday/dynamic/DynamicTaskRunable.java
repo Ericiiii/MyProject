@@ -64,6 +64,7 @@ public class DynamicTaskRunable implements Runnable{
                String xmlResult = get(urlAll, charset);// 得到一个xml字符串
                list = XMLUtils.getLotteryList(xmlResult,"row","pid","acode","atime",1);
                if(list.size()<1){  //如果没有抓取到数据 ，那么开始抓取第二个接口
+                   Thread.sleep(20000);
                    log.info("未抓取到数据，开始尝试抓取第二个接口...");
                    String jsonResult=get(urlAllTwo,charset);
                    list=JSONUtils.getLotteryList(jsonResult,taskId);
@@ -77,8 +78,10 @@ public class DynamicTaskRunable implements Runnable{
                list=JSONUtils.getLotteryList(jsonResult,taskId);
 
            }
+            if(list.size()>0){
+               execute(taskId,list,time);
+            }
 
-           execute(taskId,list,time);
 
 
 
@@ -89,22 +92,45 @@ public class DynamicTaskRunable implements Runnable{
            String url=ConfigLoadUtils.getConfigValueByKey("xync.one.api.url");
            String code=ConfigLoadUtils.getConfigValueByKey("xync.one.api.code");
            String ConfigTime=ConfigLoadUtils.getConfigValueByKey("xync.one.api.time");
-
            String urlAll=url+"?"+"lotCode="+code;
            String chatset="UTF-8";
-           String jsonResult=get(urlAll,chatset);
+
+           String urlTwo=ConfigLoadUtils.getConfigValueByKey("xync.two.api.url");
+           String codeTwo=ConfigLoadUtils.getConfigValueByKey("xync.two.api.code");
+           String ConfigTimeTwo=ConfigLoadUtils.getConfigValueByKey("xync.two.api.time");
+           String urlAllTwo=urlTwo+"?"+"lotCode="+codeTwo;
 
 
-           List <LotteryEntity> list= JSONUtils.getLotteryList(jsonResult,taskId);
-           execute(taskId,list,ConfigTime);
+           List <LotteryEntity> list= null;
+           try {
+               String jsonResult=get(urlAll,chatset);
+               list = JSONUtils.getLotteryList(jsonResult,taskId);
+
+               if(list.size()<1){
+                   Thread.sleep(20000);
+                   log.info("未抓取到数据，开始尝试抓取第二个接口...");
+                   String jsonStr=get(urlAllTwo,chatset);
+                   JSONUtils.getLotteryList(jsonStr,taskId);
+
+               }
+           } catch (Exception e) {
+               e.printStackTrace();
+               log.info("接口出现异常，开始尝试抓取第二个接口...");
+               String jsonStr=get(urlAllTwo,chatset);
+               JSONUtils.getLotteryList(jsonStr,taskId);
+           }
+           if(list.size()>0){
+               execute(taskId,list,ConfigTime);
+           }
+
 
        }
        if(taskId==3){
-           log.info("开始执行【广西十一选五】当前时间为:"+new Date());
+           log.info("开始执行【广西快乐十分】当前时间为:"+new Date());
 
-           String url=ConfigLoadUtils.getConfigValueByKey("gxklsf.one.api.url");
-           String code=ConfigLoadUtils.getConfigValueByKey("gxklsf.one.api.code");
-           String ConfigTime=ConfigLoadUtils.getConfigValueByKey("gxklsf.one.api.time");
+           String url=ConfigLoadUtils.getConfigValueByKey("gxklsf.two.api.url");
+           String code=ConfigLoadUtils.getConfigValueByKey("gxklsf.two.api.code");
+           String ConfigTime=ConfigLoadUtils.getConfigValueByKey("gxklsf.two.api.time");
 
            String urlAll=url+"?"+"lotCode="+code;
            String chatset="UTF-8";
@@ -112,7 +138,12 @@ public class DynamicTaskRunable implements Runnable{
 
 
            List <LotteryEntity> list= JSONUtils.getLotteryList(jsonResult,taskId);
-           execute(taskId,list,ConfigTime);
+           if(list.size()>0){
+               execute(taskId,list,ConfigTime);
+           }
+
+
+
 
        }
        if(taskId==4){
@@ -140,19 +171,23 @@ public class DynamicTaskRunable implements Runnable{
                list = JSONUtils.getLotteryList(jsonStr,taskId);
 
                if(list.size()<1){  //没有抓取到开奖结果 ，那么继续抓取第二个接口
+                   log.info("未抓取到数据，开始尝试抓取第二个接口...");
                    Thread.sleep(10000);  //延时10秒
                    String xmlResult=get(urlAllTwo,chatset);
                    list=XMLUtils.getLotteryList(xmlResult,"row","pid","acode","atime",4);
 
                }
            } catch (Exception e) {   //如果出现异常 ，那么继续抓取第二个接口
+               log.info("接口出现异常，开始尝试抓取第二个接口...");
                e.printStackTrace();
                String xmlResult=get(urlAllTwo,chatset);
                list=XMLUtils.getLotteryList(xmlResult,"row","pid","acode","atime",4);
            }
 
+           if(list.size()>0){
+               execute(taskId,list,ConfigTime);
+           }
 
-           execute(taskId,list,ConfigTime);
 
        }
 
@@ -168,11 +203,19 @@ public class DynamicTaskRunable implements Runnable{
     //执行
     public  void execute(int lotteryId,List <LotteryEntity> list,String configTime){
 
+        //处理期号不一致
+        String pid=list.get(0).getPid();
+        if(pid.substring(0,4).equals("2017")){  //如果期号是以2017xxx开头，那么修改成17xxx开头
+            pid=list.get(0).getPid().substring(2);
+        }
+
+
+
 
         //首先查询开奖结果是否在数据库中存在
-        List<LotteryEntity> queryList= lotteryService.queryLottery(new LotteryEntity(list.get(0).getPid(),list.get(0).getAcode(),list.get(0).getAtime(),lotteryId));
+        List<LotteryEntity> queryList= lotteryService.queryLottery(new LotteryEntity(pid,list.get(0).getAcode(),list.get(0).getAtime(),lotteryId));
         if(queryList.size()<1){
-            lotteryService.insertLottery(new LotteryEntity(list.get(0).getPid(),list.get(0).getAcode(),list.get(0).getAtime(),lotteryId));
+            lotteryService.insertLottery(new LotteryEntity(pid,list.get(0).getAcode(),list.get(0).getAtime(),lotteryId));
             //查询最近一次开奖时间 ，计算出下一次开奖时间
             List<LotteryEntity> last= lotteryService.getLotteryLastTime(new LotteryEntity("","","",taskId));
 

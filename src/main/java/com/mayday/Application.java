@@ -1,6 +1,4 @@
 package com.mayday;
-import com.mayday.dynamic.DynamicTask;
-import com.mayday.scheduler.TimerManager;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.tomcat.jdbc.pool.DataSource;
 import org.mybatis.spring.SqlSessionFactoryBean;

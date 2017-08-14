@@ -56,6 +56,13 @@
       <artifactId>spring-boot-starter-redis</artifactId>
     </dependency>
 
+    <!-- Shiro -->
+    <dependency>
+       <groupId>org.apache.shiro</groupId>
+       <artifactId>shiro-spring</artifactId>
+       <version>1.2.2</version>
+    </dependency>
+
     <!--  dom4J-->
     <dependency>
       <groupId>dom4j</groupId>
@@ -157,6 +164,18 @@
       <groupId>org.springframework</groupId>
       <artifactId>spring-test</artifactId>
       <version>RELEASE</version>
+    </dependency>
+
+    <!-- Spirng data JPA依赖; -->
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-jpa</artifactId>
+    </dependency>
+    <!-- mysql驱动; -->
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
     </dependency>
 
 

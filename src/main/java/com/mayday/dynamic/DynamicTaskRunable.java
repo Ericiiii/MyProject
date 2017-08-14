@@ -78,9 +78,9 @@ public class DynamicTaskRunable implements Runnable{
                list=JSONUtils.getLotteryList(jsonResult,taskId);
 
            }
-            if(list.size()>0){
+
                execute(taskId,list,time);
-            }
+
 
 
 
@@ -119,9 +119,9 @@ public class DynamicTaskRunable implements Runnable{
                String jsonStr=get(urlAllTwo,chatset);
                JSONUtils.getLotteryList(jsonStr,taskId);
            }
-           if(list.size()>0){
+
                execute(taskId,list,ConfigTime);
-           }
+
 
 
        }
@@ -138,9 +138,8 @@ public class DynamicTaskRunable implements Runnable{
 
 
            List <LotteryEntity> list= JSONUtils.getLotteryList(jsonResult,taskId);
-           if(list.size()>0){
                execute(taskId,list,ConfigTime);
-           }
+
 
 
 
@@ -184,9 +183,9 @@ public class DynamicTaskRunable implements Runnable{
                list=XMLUtils.getLotteryList(xmlResult,"row","pid","acode","atime",4);
            }
 
-           if(list.size()>0){
+
                execute(taskId,list,ConfigTime);
-           }
+
 
 
        }
@@ -204,10 +203,11 @@ public class DynamicTaskRunable implements Runnable{
     public  void execute(int lotteryId,List <LotteryEntity> list,String configTime){
 
         //处理期号不一致
-        String pid=list.get(0).getPid();
+       String pid=list.get(0).getPid();
         if(pid.substring(0,4).equals("2017")){  //如果期号是以2017xxx开头，那么修改成17xxx开头
             pid=list.get(0).getPid().substring(2);
         }
+
 
 
 

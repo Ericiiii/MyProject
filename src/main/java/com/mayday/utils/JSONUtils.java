@@ -27,7 +27,7 @@ public class JSONUtils {
             JSONObject jsonObject2=JSONObject.parseObject(jsonObject1.getString("data"));
             list.add(new LotteryEntity(jsonObject2.getString("preDrawIssue"),jsonObject2.getString("preDrawCode"),jsonObject2.getString("preDrawTime"),lotteryId));
 
-        }else {  //广西十一选五或者其他返回为json数组
+        }else {  //广西快乐十分或者其他返回为json数组
 
 
             JSONArray jsonArray=(JSONArray)jsonObject1.getJSONArray("data");

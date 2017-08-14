@@ -12,80 +12,60 @@
     <schema id="6" parent="1" name="sakila"/>
     <schema id="7" parent="1" name="sys"/>
     <schema id="8" parent="1" name="world"/>
-    <table id="9" parent="2" name="lotteryigkbet"/>
-    <table id="10" parent="2" name="tasklist"/>
-    <table id="11" parent="2" name="user"/>
-    <column id="12" parent="9" name="id">
+    <schema id="9" parent="1" name="mayday"/>
+    <table id="10" parent="2" name="lotteryigkbet"/>
+    <table id="11" parent="2" name="tasklist"/>
+    <column id="12" parent="10" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="13" parent="9" name="pid">
+    <column id="13" parent="10" name="pid">
       <Position>2</Position>
       <DataType>varchar(20)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="14" parent="9" name="acode">
+    <column id="14" parent="10" name="acode">
       <Position>3</Position>
       <DataType>varchar(50)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="15" parent="9" name="atime">
+    <column id="15" parent="10" name="atime">
       <Position>4</Position>
       <DataType>datetime|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="16" parent="9" name="lotteryId">
+    <column id="16" parent="10" name="lotteryId">
       <Position>5</Position>
       <Comment>彩票id</Comment>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="17" parent="9" name="PRIMARY">
+    <key id="17" parent="10" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="18" parent="10" name="id">
+    <column id="18" parent="11" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="19" parent="10" name="taskId">
+    <column id="19" parent="11" name="taskId">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="20" parent="10" name="expression">
+    <column id="20" parent="11" name="expression">
       <Position>3</Position>
       <DataType>mediumtext|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="21" parent="10" name="PRIMARY">
+    <key id="21" parent="11" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="22" parent="11" name="userId">
-      <Position>1</Position>
-      <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-    </column>
-    <column id="23" parent="11" name="userName">
-      <Position>2</Position>
-      <DataType>varchar(20)|0</DataType>
-    </column>
-    <column id="24" parent="11" name="password">
-      <Position>3</Position>
-      <DataType>varchar(20)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <key id="25" parent="11" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>userId</ColNames>
       <Primary>1</Primary>
     </key>
   </database-model>

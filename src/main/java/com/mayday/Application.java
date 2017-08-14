@@ -1,6 +1,4 @@
 package com.mayday;
-import com.mayday.dynamic.DynamicTask;
-import com.mayday.scheduler.TimerManager;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.tomcat.jdbc.pool.DataSource;
 import org.mybatis.spring.SqlSessionFactoryBean;
@@ -52,6 +50,7 @@ public class Application {
 
     public static void main(String [] args){
         SpringApplication.run(Application.class,args);
+        System.out.println("mayday");
 
     }
 

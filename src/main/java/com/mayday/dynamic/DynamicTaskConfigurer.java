@@ -13,6 +13,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
+import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledFuture;
 
 /**
@@ -32,8 +33,12 @@ public class DynamicTaskConfigurer implements SchedulingConfigurer {
 
     @Override
     public void configureTasks(ScheduledTaskRegistrar registrar) {
+        //更改为多线程执行
+     //   registrar.setScheduler(Executors.newScheduledThreadPool(4));
         this.registrar = registrar;
     }
+
+
 
     public void refreshTasks(List<TimingTask> tasks) {
         //取消已经删除的策略任务

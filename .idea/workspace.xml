@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4556964-bda2-4b76-b20a-22c1a80a963a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/mayday/Application.class" afterPath="$PROJECT_DIR$/target/classes/com/mayday/Application.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/mayday/dynamic/DynamicTaskRunable.class" afterPath="$PROJECT_DIR$/target/classes/com/mayday/dynamic/DynamicTaskRunable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/config.properties" afterPath="$PROJECT_DIR$/target/classes/config.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sql/dream_lotteryigkbet.sql" afterPath="$PROJECT_DIR$/target/classes/sql/dream_lotteryigkbet.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sql/dream_tasklist.sql" afterPath="$PROJECT_DIR$/target/classes/sql/dream_tasklist.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mayday/dynamic/DynamicTaskConfigurer.java" afterPath="$PROJECT_DIR$/src/main/java/com/mayday/dynamic/DynamicTaskConfigurer.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,7 +48,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lotteryigkbet" pinned="false" current-in-tab="true">
+      <file leaf-file-name="lotteryigkbet" pinned="false" current-in-tab="false">
         <entry file="das://table:/536ed508/dc46d78c-89cc-44a1-82ab-6d38165f7922/dream.lotteryigkbet">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
@@ -125,21 +119,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/mayday/mapper/UserMapper.java">
+      <file leaf-file-name="DynamicTaskConfigurer.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mayday/dynamic/DynamicTaskConfigurer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="15" column="15" lean-forward="false" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
+            <state relative-caret-position="186">
+              <caret line="36" column="70" lean-forward="true" selection-start-line="36" selection-start-column="70" selection-end-line="36" selection-end-column="70" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DynamicMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/mayday/mapper/DynamicMapper.java">
+      <file leaf-file-name="UserMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mayday/mapper/UserMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="16" column="41" lean-forward="true" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
+            <state relative-caret-position="312">
+              <caret line="15" column="15" lean-forward="false" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -179,7 +173,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/mayday/quartz/QuartzManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mayday/quartz/QuartzTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mayday/dynamic/TaskConfigurer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mayday/dynamic/DynamicTaskConfigurer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mayday/dynamic/DynamicTaskConfigurerByCron.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mayday/test/MyTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mayday/dynamic/DynamicTaskRunable.java" />
@@ -189,6 +182,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/mayday/Application.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/dc46d78c-89cc-44a1-82ab-6d38165f7922/console.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mayday/dynamic/DynamicTaskConfigurer.java" />
       </list>
     </option>
   </component>
@@ -204,7 +198,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -565,12 +559,12 @@
       <workItem from="1502500120132" duration="1244000" />
       <workItem from="1502501392773" duration="20635000" />
       <workItem from="1502672309604" duration="726000" />
-      <workItem from="1502673050225" duration="1473000" />
+      <workItem from="1502673050225" duration="2624000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77671000" />
+    <option name="totallyTimeSpent" value="78822000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -582,7 +576,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="1" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.53579175" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
@@ -593,7 +588,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37310195" sideWeight="0.4978678" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.46963122" sideWeight="0.4978678" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3373102" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -809,14 +804,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mayday/dynamic/DynamicTaskConfigurer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="23" column="68" lean-forward="true" selection-start-line="23" selection-start-column="68" selection-end-line="23" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mayday/dynamic/DynamicTaskConfigurerByCron.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="172">
@@ -973,6 +960,14 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mayday/dynamic/DynamicTaskConfigurer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="36" column="70" lean-forward="true" selection-start-line="36" selection-start-column="70" selection-end-line="36" selection-end-column="70" />
+          <folding />
         </state>
       </provider>
     </entry>

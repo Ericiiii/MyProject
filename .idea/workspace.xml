@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4556964-bda2-4b76-b20a-22c1a80a963a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/mayday/Application.class" afterPath="$PROJECT_DIR$/target/classes/com/mayday/Application.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/mayday/dynamic/DynamicTaskRunable.class" afterPath="$PROJECT_DIR$/target/classes/com/mayday/dynamic/DynamicTaskRunable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/mayday/dynamic/TaskConfigurer.class" afterPath="$PROJECT_DIR$/target/classes/com/mayday/dynamic/TaskConfigurer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/mayday/utils/ConfigLoadUtils.class" afterPath="$PROJECT_DIR$/target/classes/com/mayday/utils/ConfigLoadUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/mayday/utils/MD5Utils.class" afterPath="$PROJECT_DIR$/target/classes/com/mayday/utils/MD5Utils.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lotterydata.iml" afterPath="$PROJECT_DIR$/lotterydata.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mayday/utils/MD5Utils.java" afterPath="$PROJECT_DIR$/src/main/java/com/mayday/utils/MD5Utils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/config.properties" afterPath="$PROJECT_DIR$/target/classes/config.properties" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -549,12 +541,12 @@
       <workItem from="1502413331729" duration="23020000" />
       <workItem from="1502464396397" duration="1781000" />
       <workItem from="1502640975036" duration="451000" />
-      <workItem from="1502708828065" duration="241000" />
+      <workItem from="1502708828065" duration="368000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56066000" />
+    <option name="totallyTimeSpent" value="56193000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">

@@ -50,10 +50,9 @@ public class Application {
 
     public static void main(String [] args){
         SpringApplication.run(Application.class,args);
-<<<<<<< HEAD
+
         System.out.println("mayday");
-=======
->>>>>>> cea4b3f33b5fb8948b75a2a1035076553d9064ad
+
        
 
     }

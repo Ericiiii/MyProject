@@ -4,3 +4,9 @@ Homestead.yaml
 Homestead.json
 .env
 .idea
+.classpath
+.project
+.springBeans
+.settings/
+target/
+*.iml

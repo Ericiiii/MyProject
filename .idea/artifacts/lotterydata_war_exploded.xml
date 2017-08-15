@@ -92,6 +92,7 @@
           <element id="library" level="project" name="Maven: org.springframework.data:spring-data-commons:1.11.4.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-orm:4.2.5.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-aspects:4.2.5.RELEASE" />
+          <element id="library" level="project" name="Maven: com.alibaba:druid:0.2.23" />
         </element>
       </element>
       <element id="directory" name="META-INF">

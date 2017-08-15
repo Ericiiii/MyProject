@@ -34,7 +34,15 @@ public class MD5Utils {
         }
 
         public static void main(String[] args) {
+
+            String message="卿青是头猪～";
+
+            System.out.println("加密前信息为："+message);
+
+            System.out.println("加密后信息为："+MD5Utils.encode(message));
+
             System.out.println(MD5Utils.encode("123456"));
+
 
 
         }

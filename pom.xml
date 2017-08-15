@@ -178,6 +178,13 @@
       <artifactId>mysql-connector-java</artifactId>
     </dependency>
 
+    <!-- 数据源连接池 -->
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>druid</artifactId>
+      <version>0.2.23</version>
+    </dependency>
+
 
   </dependencies>
 

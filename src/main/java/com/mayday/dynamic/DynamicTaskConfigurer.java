@@ -34,7 +34,7 @@ public class DynamicTaskConfigurer implements SchedulingConfigurer {
     @Override
     public void configureTasks(ScheduledTaskRegistrar registrar) {
         //更改为多线程执行
-     //   registrar.setScheduler(Executors.newScheduledThreadPool(4));
+        registrar.setScheduler(Executors.newScheduledThreadPool(4));
         this.registrar = registrar;
     }
 

@@ -57,7 +57,6 @@ public class DynamicTaskConfigurer implements SchedulingConfigurer {
             }
             if (scheduledFutures.containsKey(tt.getTaskId())) {
 
-                log.info("任务"+tt.getTaskId()+"定时策略已经被更改..");
                 scheduledFutures.get(tt.getTaskId()).cancel(false);
                 scheduledFutures.remove(tt.getTaskId());
                 inTask.remove(tt.getTaskId());

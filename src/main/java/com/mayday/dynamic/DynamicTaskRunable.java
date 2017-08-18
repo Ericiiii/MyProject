@@ -39,8 +39,6 @@ public class DynamicTaskRunable implements Runnable{
     public void run() {
 
 
-        log.info("TaskRunable is running, taskId：【"+taskId+"】执行时间为:"+new Date());
-
         //得到任务编号 : 1 .重庆时时彩 2 .幸运农场 3 .广西十一选五 4 . 江苏快3
        if(taskId==1){  //执行重庆时时彩
            //接口1
@@ -64,41 +62,47 @@ public class DynamicTaskRunable implements Runnable{
                String xmlResult = get(urlAll, charset);// 得到一个xml字符串
                list = XMLUtils.getLotteryList(xmlResult,"row","pid","acode","atime",1);
 
-               if(list.size()>1){
+               //手动制造一个异常测试
+               long ii=20/0;
+
+
+               if(list.size()>0){
                    //查询抓取的是否是重复数据
                    List <LotteryEntity> ll=lotteryService.queryLottery(new LotteryEntity(list.get(0).getPid(),list.get(0).getAcode(),list.get(0).getAtime(),taskId));
                    if(ll.size()>0){  //抓取到重复数据 ，那么等待三十秒继续抓取
                        long t=30000;
-                       log.info("【重庆时时彩】抓取到重复数据，间隔【"+t+"】后再次抓取");
+                       log.info("【重庆时时彩】抓取到重复数据，等待【"+t+"】后再次抓取");
                        Thread.sleep(t);
                        String xr = get(urlAll, charset);// 得到一个xml字符串
                        list = XMLUtils.getLotteryList(xr,"row","pid","acode","atime",1);
                    }
                }else {
 
-                 //如果没有抓取到数据 ，那么开始抓取第二个接口
-                   Thread.sleep(20000);
-                   log.info("【重庆时时彩】未抓取到数据，开始尝试抓取第二个接口...");
+                  //如果没有抓取到数据 ，那么开始抓取第二个接口
+                   long t=30000;
+                   log.info("【重庆时时彩】未抓取到数据，等待【"+t+"】后开始尝试抓取第二个接口...");
+                   Thread.sleep(t);
                    String jsonResult=get(urlAllTwo,charset);
                    list=JSONUtils.getLotteryList(jsonResult,taskId);
 
                }
            } catch (Exception e) {
                e.printStackTrace();
+               long t=30000;
+               log.info("【重庆时时彩】接口出现异常，等待【"+t+"】后开始尝试抓取第二个接口...");
                //如果出现异常 ，那么请求第二个接口
-               log.info("【重庆时时彩】接口出现异常，开始尝试抓取第二个接口...");
-               String jsonResult=get(urlAllTwo,charset);
-               list=JSONUtils.getLotteryList(jsonResult,taskId);
+               try {
+                   Thread.sleep(t);
+                   String jsonResult=get(urlAllTwo,charset);
+                   list=JSONUtils.getLotteryList(jsonResult,taskId);
+
+               } catch (InterruptedException e1) {
+                   e1.printStackTrace();
+               }
 
            }
 
                execute(taskId,list,time);
-
-
-
-
-
-
        }
        if(taskId==2){
            log.info("开始执行【幸运农场】当前时间为:"+new Date());
@@ -118,28 +122,37 @@ public class DynamicTaskRunable implements Runnable{
            try {
                String jsonResult=get(urlAll,chatset);
                list = JSONUtils.getLotteryList(jsonResult,taskId);
-               if(list.size()>1){
+               if(list.size()>0){
                    //查询抓取的是否是重复数据
                    List <LotteryEntity> ll=lotteryService.queryLottery(new LotteryEntity(list.get(0).getPid(),list.get(0).getAcode(),list.get(0).getAtime(),taskId));
                    if(ll.size()>0){  //抓取到重复数据 ，那么等待三十秒继续抓取
                        long time=30000;
-                       log.info("【幸运农场】抓取到重复数据，间隔【"+time+"】后再次抓取");
+                       log.info("【幸运农场】抓取到重复数据，等待【"+time+"】后再次抓取");
                        Thread.sleep(time);
                        String js=get(urlAll,chatset);
                        list = JSONUtils.getLotteryList(js,taskId);
                    }
                }else {
-                   Thread.sleep(20000);
-                   log.info("【幸运农场】未抓取到数据，开始尝试抓取第二个接口...");
+                   long t=30000;
+                   log.info("【幸运农场】未抓取到数据，等待【"+t+"】后开始尝试抓取第二个接口...");
+
+                   Thread.sleep(t);
                    String jsonStr=get(urlAllTwo,chatset);
-                   JSONUtils.getLotteryList(jsonStr,taskId);
+                   list=JSONUtils.getLotteryList(jsonStr,taskId);
 
                }
            } catch (Exception e) {
                e.printStackTrace();
-               log.info("【幸运农场】接口出现异常，开始尝试抓取第二个接口...");
-               String jsonStr=get(urlAllTwo,chatset);
-               JSONUtils.getLotteryList(jsonStr,taskId);
+               long t=30000;
+               log.info("【幸运农场】接口出现异常，等待【"+t+"】后开始尝试抓取第二个接口...");
+               try {
+                   Thread.sleep(t);
+                   String jsonStr=get(urlAllTwo,chatset);
+                   list=JSONUtils.getLotteryList(jsonStr,taskId);
+               } catch (InterruptedException e1) {
+                   e1.printStackTrace();
+               }
+
            }
 
                execute(taskId,list,ConfigTime);
@@ -190,39 +203,42 @@ public class DynamicTaskRunable implements Runnable{
            try {  //如果接口请求出现异常 ，那么执行第二个接口
                String jsonStr=get(urlAll,chatset);
                list = JSONUtils.getLotteryList(jsonStr,taskId);
-               if(list.size()>1){
+               if(list.size()>0){
                    //查询抓取的是否是重复数据
                    List <LotteryEntity> ll=lotteryService.queryLottery(new LotteryEntity(list.get(0).getPid(),list.get(0).getAcode(),list.get(0).getAtime(),taskId));
                    if(ll.size()>0){  //抓取到重复数据 ，那么等待三十秒继续抓取
                        long time=30000;
-                       log.info("【江苏快3】抓取到重复数据，间隔【"+time+"】后再次抓取");
+                       log.info("【江苏快3】抓取到重复数据，等待【"+time+"】后再次抓取");
                        Thread.sleep(time);
                        String js=get(urlAll,chatset);
                        list = JSONUtils.getLotteryList(js,taskId);
                      }
                }else {
-
+                   long t=30000;
                    //没有抓取到开奖结果 ，那么继续抓取第二个接口
-                   log.info("【江苏快3】未抓取到数据，开始尝试抓取第二个接口...");
-                   Thread.sleep(10000);  //延时10秒
+                   log.info("【江苏快3】未抓取到数据，等待【"+t+"】后开始尝试抓取第二个接口...");
+                   Thread.sleep(t);  //延时10秒
                    String xmlResult=get(urlAllTwo,chatset);
                    list=XMLUtils.getLotteryList(xmlResult,"row","pid","acode","atime",4);
 
 
                }
 
-
-
-
            } catch (Exception e) {   //如果出现异常 ，那么继续抓取第二个接口
-               log.info("【江苏快3】接口出现异常，开始尝试抓取第二个接口...");
+               long t=30000;
+               log.info("【江苏快3】接口出现异常，等待【"+t+"】后开始尝试抓取第二个接口...");
+               try {
+                   Thread.sleep(t);
+                   String xmlResult=get(urlAllTwo,chatset);
+                   list=XMLUtils.getLotteryList(xmlResult,"row","pid","acode","atime",4);
+               } catch (InterruptedException e1) {
+                   e1.printStackTrace();
+               }
                e.printStackTrace();
-               String xmlResult=get(urlAllTwo,chatset);
-               list=XMLUtils.getLotteryList(xmlResult,"row","pid","acode","atime",4);
+
            }
 
-
-               execute(taskId,list,ConfigTime);
+           execute(taskId,list,ConfigTime);
 
 
 
@@ -246,10 +262,6 @@ public class DynamicTaskRunable implements Runnable{
             pid=list.get(0).getPid().substring(2);
         }
 
-
-
-
-
         //首先查询开奖结果是否在数据库中存在
         List<LotteryEntity> queryList= lotteryService.queryLottery(new LotteryEntity(pid,list.get(0).getAcode(),list.get(0).getAtime(),lotteryId));
         if(queryList.size()<1){
@@ -270,10 +282,32 @@ public class DynamicTaskRunable implements Runnable{
                     boolean flag= taskListService.updateTaskTime(new TimingTask(taskId,intervalTime));
                     if(flag){
 
-                        log.info("【"+taskId+"】数据库定时器时间修改成功！");
+                        switch (taskId){
+                            case 1:
+                                log.info("【重庆时时彩】数据库定时器时间修改成功！");
+                                log.info("【重庆时时彩】距离下一次开奖时间为:【"+intervalTime+"】毫秒");
+                                break;
+                            case 2:
+                                log.info("【幸运农场】数据库定时器时间修改成功！");
+                                log.info("【幸运农场】距离下一次开奖时间为:【"+intervalTime+"】毫秒");
+
+                                break;
+                            case 3:
+                                log.info("【广西快乐十分】数据库定时器时间修改成功！");
+                                log.info("【广西快乐十分】距离下一次开奖时间为:【"+intervalTime+"】毫秒");
+
+                                break;
+                            case 4:
+                                log.info("【江苏快3】数据库定时器时间修改成功！");
+                                log.info("【江苏快3】距离下一次开奖时间为:【"+intervalTime+"】毫秒");
+                                break;
+
+                        }
+
+
                     }
                 }
-                log.info("【"+taskId+"】距离下一次开奖时间为:【"+intervalTime+"】毫秒");
+
             }
 
         }

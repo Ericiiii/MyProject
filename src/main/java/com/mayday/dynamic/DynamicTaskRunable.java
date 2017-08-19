@@ -63,9 +63,7 @@ public class DynamicTaskRunable implements Runnable{
                list = XMLUtils.getLotteryList(xmlResult,"row","pid","acode","atime",1);
 
                //手动制造一个异常测试
-               long ii=20/0;
-
-
+               //  long ii=20/0;
                if(list.size()>0){
                    //查询抓取的是否是重复数据
                    List <LotteryEntity> ll=lotteryService.queryLottery(new LotteryEntity(list.get(0).getPid(),list.get(0).getAcode(),list.get(0).getAtime(),taskId));
@@ -101,8 +99,7 @@ public class DynamicTaskRunable implements Runnable{
                }
 
            }
-
-               execute(taskId,list,time);
+           execute(taskId,list,time);
        }
        if(taskId==2){
            log.info("开始执行【幸运农场】当前时间为:"+new Date());
@@ -154,11 +151,7 @@ public class DynamicTaskRunable implements Runnable{
                }
 
            }
-
-               execute(taskId,list,ConfigTime);
-
-
-
+         execute(taskId,list,ConfigTime);
        }
        if(taskId==3){
            log.info("开始执行【广西快乐十分】当前时间为:"+new Date());
@@ -237,21 +230,14 @@ public class DynamicTaskRunable implements Runnable{
                e.printStackTrace();
 
            }
-
            execute(taskId,list,ConfigTime);
 
-
-
        }
-
-
-
     }
 
     public Integer getTaskId() {
         return taskId;
     }
-
 
     //执行
     public  void execute(int lotteryId,List <LotteryEntity> list,String configTime){
@@ -301,10 +287,7 @@ public class DynamicTaskRunable implements Runnable{
                                 log.info("【江苏快3】数据库定时器时间修改成功！");
                                 log.info("【江苏快3】距离下一次开奖时间为:【"+intervalTime+"】毫秒");
                                 break;
-
-                        }
-
-
+                         }
                     }
                 }
 
